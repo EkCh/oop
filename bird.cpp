@@ -25,11 +25,8 @@ namespace animals {
 			ofst << "nonmigrant" << endl;
 			break;
 		}
-<<<<<<< HEAD
 		ofst << "Age: " << age << endl;
-=======
 		ofst << "Name size: " << name_size() << endl;
->>>>>>> new_function
 	}
 	bird::~bird() {}
 } // end animals namespace

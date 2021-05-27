@@ -17,14 +17,11 @@ int main(int argc, char* argv[]) {
 	c.in(ifst);
 	ofst << "Filled container. " << endl;
 	c.out(ofst);
-<<<<<<< HEAD
 	cout << "Sorted container. " << endl;
 	c.sort();
 	c.out(ofst);
-=======
 	ofst << "Filtered container. " << endl;
 	c.output_fish(ofst);
->>>>>>> new_output
 	c.clear();
 	ofst << "Empty container. " << endl;
 	c.out(ofst);

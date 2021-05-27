@@ -2,6 +2,7 @@
 #include "animal_atd.h"
 #include "fish_atd.h"
 #include "bird_atd.h"
+#include "beast_atd.h"
 
 using namespace std;
 namespace animals {
@@ -19,6 +20,9 @@ namespace animals {
 		case 2:
 			an = new bird;
 			break;
+		case 3:
+			an = new beast;
+			break;
 		default:
 			return 0;
 		}
@@ -26,7 +30,6 @@ namespace animals {
 		an->input(ifst);
 		return an;
 	}
-<<<<<<< HEAD
 
 	int animal::name_size()
 	{
@@ -38,12 +41,9 @@ namespace animals {
 		return name_size() < other->name_size();
 	}
 
-=======
-	
-
 	void animal::output_fish(std::ofstream& ofst)
 	{
 		ofst << endl; // пустая строка
 	}
->>>>>>> new_output
+
 } // end animals namespace
