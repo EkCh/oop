@@ -14,6 +14,7 @@ namespace animals {
         virtual void input(std::ifstream& ifst) = 0;
         virtual void output(std::ofstream& ofst) = 0;
         virtual int name_size();
+        bool compare(animal* other);
     };
 
 } // end animals namespac

@@ -2,7 +2,7 @@
 #include "animal_atd.h"
 #include <fstream>
 namespace animals {
-    
+
     class node
     {
     public:
@@ -24,6 +24,9 @@ namespace animals {
         void in(std::ifstream& ifst);
         void out(std::ofstream& ofst);
         void clear();
+        node* get_node(int index);
+        void swap(int index_first, int index_second);
+        void sort();
 
         container();
         ~container();

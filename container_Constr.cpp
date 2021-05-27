@@ -77,6 +77,42 @@ namespace animals {
 		size = 0;
 	}
 
+	node* container::get_node(int index)
+	{
+		node* returnNode = head;
+
+		for (int i = 0; i < index; i++)
+		{
+			returnNode = returnNode->next;
+		}
+
+		return returnNode;
+	}
+
+	void container::swap(int index_first, int index_second)
+	{
+		node* temp = new node;
+
+		temp->an = get_node(index_first)->an;
+		get_node(index_first)->an = get_node(index_second)->an;
+		get_node(index_second)->an = temp->an;
+
+	}
+
+	void container::sort()
+	{
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = i + 1; j < size; j++)
+			{
+				if (get_node(i)->an->compare(get_node(j)->an))
+				{
+					swap(i, j);
+				}
+			}
+		}
+	}
+
 	container::container()
 	{
 		size = 0;

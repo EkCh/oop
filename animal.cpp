@@ -32,5 +32,9 @@ namespace animals {
 		return (name.size());
 	}
 
+	bool animal::compare(animal* other)
+	{
+		return name_size() < other->name_size();
+	}
 
 } // end animals namespace
