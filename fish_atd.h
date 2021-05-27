@@ -1,6 +1,7 @@
+#pragma once
 #include "animal_atd.h"
 #include <fstream>
-#pragma once
+
 namespace animals {
     class fish : public animal
     {
@@ -11,6 +12,7 @@ namespace animals {
 
         void input(std::ifstream& ifst);
         void output(std::ofstream& ofst);
+        void output_fish(std::ofstream& ofst);
         ~fish();
     };
 } // end animals namespace

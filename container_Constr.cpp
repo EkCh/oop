@@ -62,6 +62,31 @@ namespace animals {
 		}
 	}
 
+	bool node::out_node_fish(ofstream& ofst)
+	{
+		an->output_fish(ofst);
+		return true;
+	}
+
+	void container::output_fish(ofstream& ofst)
+	{
+		ofst << "Only fish. " << endl;
+
+		node* curNode = head;
+		int i = 0;
+
+		for (int i = 0; i < size; i++)
+		{
+			curNode = head;
+			for (int j = 0; j < i; j++)
+			{
+				curNode = curNode->next;
+			}
+			curNode->out_node_fish(ofst);
+		}
+
+	}
+
 	// Очистка контейнера от элементов
 	void container::clear()
 	{

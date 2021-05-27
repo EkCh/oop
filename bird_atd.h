@@ -1,6 +1,7 @@
+#pragma once
 #include <fstream>
 #include "animal_atd.h"
-#pragma once
+
 namespace animals {
     class bird : public animal
     {

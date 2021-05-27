@@ -11,6 +11,7 @@ namespace animals {
 
         bool add_node(std::ifstream& ifst);
         bool out_node(std::ofstream& ofst);
+        bool out_node_fish(std::ofstream& ofst);
         ~node();
     };
 
@@ -20,9 +21,9 @@ namespace animals {
         long size;
         node* head;
 
-
         void in(std::ifstream& ifst);
         void out(std::ofstream& ofst);
+        void output_fish(std::ofstream& ofst);
         void clear();
         node* get_node(int index);
         void swap(int index_first, int index_second);

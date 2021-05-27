@@ -26,6 +26,7 @@ namespace animals {
 		an->input(ifst);
 		return an;
 	}
+<<<<<<< HEAD
 
 	int animal::name_size()
 	{
@@ -37,4 +38,12 @@ namespace animals {
 		return name_size() < other->name_size();
 	}
 
+=======
+	
+
+	void animal::output_fish(std::ofstream& ofst)
+	{
+		ofst << endl; // пустая строка
+	}
+>>>>>>> new_output
 } // end animals namespace
