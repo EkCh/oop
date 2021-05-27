@@ -26,6 +26,7 @@ namespace animals {
 			ofst << "lake" << endl;
 			break;
 		}
+		ofst << "Name size: " << name_size() << endl;
 	}
 	fish::~fish() {}
 } // end animals namespace

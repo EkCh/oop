@@ -4,12 +4,11 @@
 #include "bird_atd.h"
 
 using namespace std;
-namespace animals 
-{
+namespace animals {
 	// ¬вод параметров из файла
 	animal* animal::in(ifstream& ifst)
 	{
-		animal *an;
+		animal* an;
 		int k;
 		ifst >> k;
 		switch (k)
@@ -27,5 +26,11 @@ namespace animals
 		an->input(ifst);
 		return an;
 	}
-	
+
+	int animal::name_size()
+	{
+		return (name.size());
+	}
+
+
 } // end animals namespace

@@ -23,6 +23,7 @@ namespace animals {
 			ofst << "nonmigrant" << endl;
 			break;
 		}
+		ofst << "Name size: " << name_size() << endl;
 	}
 	bird::~bird() {}
 } // end animals namespace
