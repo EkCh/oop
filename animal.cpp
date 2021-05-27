@@ -2,7 +2,6 @@
 #include "animal_atd.h"
 #include "fish_atd.h"
 #include "bird_atd.h"
-#include "beast_atd.h"
 
 using namespace std;
 namespace animals 
@@ -20,9 +19,6 @@ namespace animals
 			break;
 		case 2:
 			an = new bird;
-			break;
-		case 3:
-			an = new beast;
 			break;
 		default:
 			return 0;
