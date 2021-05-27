@@ -28,4 +28,11 @@ namespace animals {
 		}
 	}
 	fish::~fish() {}
+
+	void fish::output_fish(std::ofstream& ofst)
+	{
+		output(ofst);
+
+	}
+
 } // end animals namespace

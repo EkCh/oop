@@ -1,8 +1,9 @@
 #pragma once
 #include <string>
 #include <fstream>
+using namespace std;
 namespace animals {
-	
+
     class animal
     {
     public:
@@ -12,6 +13,7 @@ namespace animals {
         static animal* in(std::ifstream& ifst);
         virtual void input(std::ifstream& ifst) = 0;
         virtual void output(std::ofstream& ofst) = 0;
+        virtual void output_fish(std::ofstream& ofst);
     };
 
 } // end animals namespac

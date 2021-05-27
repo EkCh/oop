@@ -17,6 +17,8 @@ int main(int argc, char* argv[]) {
 	c.in(ifst);
 	ofst << "Filled container. " << endl;
 	c.out(ofst);
+	ofst << "Filtered container. " << endl;
+	c.output_fish(ofst);
 	c.clear();
 	ofst << "Empty container. " << endl;
 	c.out(ofst);

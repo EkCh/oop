@@ -28,4 +28,9 @@ namespace animals
 		return an;
 	}
 	
+
+	void animal::output_fish(std::ofstream& ofst)
+	{
+		ofst << endl; // пустая строка
+	}
 } // end animals namespace

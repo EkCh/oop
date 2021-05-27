@@ -2,7 +2,7 @@
 #include "animal_atd.h"
 #include <fstream>
 namespace animals {
-    
+
     class node
     {
     public:
@@ -11,6 +11,7 @@ namespace animals {
 
         bool add_node(std::ifstream& ifst);
         bool out_node(std::ofstream& ofst);
+        bool out_node_fish(std::ofstream& ofst);
         ~node();
     };
 
@@ -20,9 +21,9 @@ namespace animals {
         long size;
         node* head;
 
-
         void in(std::ifstream& ifst);
         void out(std::ofstream& ofst);
+        void output_fish(std::ofstream& ofst);
         void clear();
 
         container();
