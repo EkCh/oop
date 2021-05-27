@@ -7,9 +7,11 @@ namespace animals {
 	{
 		string tmp_name = "";
 		int hab = 0;
-		ifst >> tmp_name >> hab;
+		long tmp_age = 0;
+		ifst >> tmp_name >> hab >> tmp_age;
 		h = habitat(hab);
 		name = tmp_name;
+		age = tmp_age;
 	}
 	// Вывод параметров 
 	void fish::output(ofstream& ofst)
@@ -26,6 +28,7 @@ namespace animals {
 			ofst << "lake" << endl;
 			break;
 		}
+		ofst << "Age: " << age << endl;
 	}
 	fish::~fish() {}
 } // end animals namespace
