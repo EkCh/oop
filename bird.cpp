@@ -7,11 +7,9 @@ namespace animals {
 	{
 		string tmp_name = "";
 		int mgr = 0;
-		long tmp_age = 0;
-		ifst >> tmp_name >> mgr >> tmp_age;
+		ifst >> tmp_name >> mgr;
 		m = migr(mgr);
 		name = tmp_name;
-		age = tmp_age;
 	}
 	// Вывод параметров 
 	void bird::output(ofstream& ofst)
@@ -25,7 +23,6 @@ namespace animals {
 			ofst << "nonmigrant" << endl;
 			break;
 		}
-		ofst << "Age: " << age << endl;
 	}
 	bird::~bird() {}
 } // end animals namespace

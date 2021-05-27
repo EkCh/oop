@@ -7,7 +7,6 @@ namespace animals {
     {
     public:
         std::string name;    // название
-        long age;
 
         virtual ~animal() {};
         static animal* in(std::ifstream& ifst);
