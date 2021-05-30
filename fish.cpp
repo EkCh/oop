@@ -66,6 +66,24 @@ namespace animals
 		ofst << "Name size: " << NameSize() << endl;
 
 	}
+
+	void fish::Multimethod(animal* other, ofstream& ofst)
+	{
+		other->MMFish(ofst);
+	}
+	void fish::MMBird(ofstream& ofst)
+	{
+		ofst << "Bird and fish" << endl;
+	}
+	void fish::MMFish(ofstream& ofst)
+	{
+		ofst << "Fish and fish" << endl;
+	}
+	void fish::MMBeast(ofstream& ofst)
+	{
+		ofst << "Beast and fish" << endl;
+	}
+
 	fish::~fish() {}
 
 	void fish::OutFish(std::ofstream& ofst)

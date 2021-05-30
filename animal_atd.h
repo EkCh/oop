@@ -18,7 +18,11 @@ namespace animals
         virtual int NameSize();
         bool Compare(animal* other);
         virtual void OutFish(std::ofstream& ofst);
-
+        
+        virtual void Multimethod(animal* other, ofstream& ofst) = 0;
+        virtual void MMBird(ofstream& ofst) = 0;
+        virtual void MMFish(ofstream& ofst) = 0;
+        virtual void MMBeast(ofstream& ofst) = 0;
     };
 } // end animals namespac
 

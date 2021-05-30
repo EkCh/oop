@@ -28,6 +28,7 @@ namespace animals
         node* GetNode(int index);
         void Swap(int index_first, int index_second);
         void Sort();
+        void Multimethod(ofstream& ofst);
 
         container();
         ~container();

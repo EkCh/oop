@@ -13,6 +13,10 @@ namespace animals
 
         void Input(std::ifstream& ifst);
         void Output(std::ofstream& ofst);
+        void Multimethod(animal* other, ofstream& ofst);
+        void MMBird(ofstream& ofst);
+        void MMFish(ofstream& ofst);
+        void MMBeast(ofstream& ofst);
         ~bird();
     };
 } // end animals namespace

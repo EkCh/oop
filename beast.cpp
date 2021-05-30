@@ -50,5 +50,22 @@ namespace animals
 		}
 	}
 
+	void beast::Multimethod(animal* other, ofstream& ofst)
+	{
+		other->MMBeast(ofst);
+	}
+	void beast::MMBird(ofstream& ofst)
+	{
+		ofst << "Bird and beast" << endl;
+	}
+	void beast::MMFish(ofstream& ofst)
+	{
+		ofst << "Fish and beast" << endl;
+	}
+	void beast::MMBeast(ofstream& ofst)
+	{
+		ofst << "Beast and beast" << endl;
+	}
+
 	beast::~beast() {}
 } // end animals namespace

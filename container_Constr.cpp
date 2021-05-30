@@ -139,6 +139,19 @@ namespace animals
 		}
 	}
 
+	void container::Multimethod(ofstream& ofst)
+	{
+		for (int i = 0; i < size - 1; i++)
+		{
+			for (int j = i + 1; j < size; j++)
+			{
+				GetNode(i)->an->Multimethod(GetNode(j)->an, ofst);
+				GetNode(i)->OutNode(ofst);
+				GetNode(j)->OutNode(ofst);
+			}
+		}
+	}
+
 	container::container()
 	{
 		size = 0;
