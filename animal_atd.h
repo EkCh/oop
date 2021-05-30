@@ -2,23 +2,23 @@
 #include <string>
 #include <fstream>
 using namespace std;
-namespace animals {
 
+namespace animals 
+{
     class animal
     {
     public:
-        std::string name;    // название
+        std::string name; 
         long age;
 
         virtual ~animal() {};
-        static animal* in(std::ifstream& ifst);
-        virtual void input(std::ifstream& ifst) = 0;
-        virtual void output(std::ofstream& ofst) = 0;
-        virtual int name_size();
-        bool compare(animal* other);
-        virtual void output_fish(std::ofstream& ofst);
+        static animal* In(std::ifstream& ifst);
+        virtual void Input(std::ifstream& ifst) = 0;
+        virtual void Output(std::ofstream& ofst) = 0;
+        virtual int NameSize();
+        bool Compare(animal* other);
+        virtual void OutFish(std::ofstream& ofst);
 
     };
-
 } // end animals namespac
 

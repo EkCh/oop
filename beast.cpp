@@ -1,20 +1,40 @@
 #include <fstream>
+#include <iostream>
 #include "beast_atd.h"
 using namespace std;
 
 namespace animals 
 {
 	// Ввод параметров 
-	void beast::input(ifstream& ifst)
+	void beast::Input(ifstream& ifst)
 	{
 		string tmp_name = "";
 		int prf = 0;
-		ifst >> tmp_name >> prf;
-		p = pref(prf);
+
+		ifst >> tmp_name;
+		if (ifst.fail())
+		{
+			cout << "Error! Unexpected end of input!" << endl;
+			exit(1);
+		}
 		name = tmp_name;
+
+		ifst >> prf;
+		if (ifst.fail())
+		{
+			cout << "Error! Unexpected end of input!" << endl;
+			exit(1);
+		}
+		if (prf < 0 || prf > 2)
+		{
+			cout << "Error! The range is <0-2>!" << endl;
+			exit(1);
+		}
+		p = pref(prf);
 	}
+
 	// Вывод параметров 
-	void beast::output(ofstream& ofst)
+	void beast::Output(ofstream& ofst)
 	{
 		ofst << "It is beast: " << name << ", it is ";
 		switch (p) {
@@ -29,5 +49,6 @@ namespace animals
 			break;
 		}
 	}
+
 	beast::~beast() {}
 } // end animals namespace

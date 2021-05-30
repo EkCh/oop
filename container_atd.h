@@ -1,17 +1,17 @@
 #pragma once
 #include "animal_atd.h"
 #include <fstream>
-namespace animals {
-
+namespace animals 
+{
     class node
     {
     public:
         animal* an;
         node* next;
 
-        bool add_node(std::ifstream& ifst);
-        bool out_node(std::ofstream& ofst);
-        bool out_node_fish(std::ofstream& ofst);
+        bool AddNode(std::ifstream& ifst);
+        bool OutNode(std::ofstream& ofst);
+        bool OutNodeFish(std::ofstream& ofst);
         ~node();
     };
 
@@ -21,13 +21,13 @@ namespace animals {
         long size;
         node* head;
 
-        void in(std::ifstream& ifst);
-        void out(std::ofstream& ofst);
-        void output_fish(std::ofstream& ofst);
-        void clear();
-        node* get_node(int index);
-        void swap(int index_first, int index_second);
-        void sort();
+        void In(std::ifstream& ifst);
+        void Out(std::ofstream& ofst);
+        void OutFish(std::ofstream& ofst);
+        void Clear();
+        node* GetNode(int index);
+        void Swap(int index_first, int index_second);
+        void Sort();
 
         container();
         ~container();

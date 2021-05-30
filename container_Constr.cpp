@@ -1,13 +1,14 @@
 #include <fstream>
 #include "container_atd.h"
 using namespace std;
-namespace animals {
 
+namespace animals 
+{
 	node::~node() {}
 
-	bool node::add_node(ifstream& ifst)
+	bool node::AddNode(ifstream& ifst)
 	{
-		an = animal::in(ifst);
+		an = animal::In(ifst);
 
 		if (an == NULL)
 		{
@@ -19,12 +20,12 @@ namespace animals {
 		}
 	}
 
-	void container::in(ifstream& ifst)
+	void container::In(ifstream& ifst)
 	{
 		while (!ifst.eof())
 		{
 			node* tmpNode = new node;
-			if (tmpNode->add_node(ifst))
+			if (tmpNode->AddNode(ifst))
 			{
 				size++;
 				if (head != NULL)
@@ -41,13 +42,13 @@ namespace animals {
 		}
 	}
 
-	bool node::out_node(ofstream& ofst)
+	bool node::OutNode(ofstream& ofst)
 	{
-		an->output(ofst);
+		an->Output(ofst);
 		return true;
 	}
 
-	void container::out(ofstream& ofst)
+	void container::Out(ofstream& ofst)
 	{
 		ofst << "Container contains " << size << " elements. " << endl;
 		node* curNode = head;
@@ -56,19 +57,19 @@ namespace animals {
 		while (curNode != NULL)
 		{
 			ofst << i << ": ";
-			curNode->out_node(ofst);
+			curNode->OutNode(ofst);
 			curNode = curNode->next;
 			i++;
 		}
 	}
 
-	bool node::out_node_fish(ofstream& ofst)
+	bool node::OutNodeFish(ofstream& ofst)
 	{
-		an->output_fish(ofst);
+		an->OutFish(ofst);
 		return true;
 	}
 
-	void container::output_fish(ofstream& ofst)
+	void container::OutFish(ofstream& ofst)
 	{
 		ofst << "Only fish. " << endl;
 
@@ -82,13 +83,13 @@ namespace animals {
 			{
 				curNode = curNode->next;
 			}
-			curNode->out_node_fish(ofst);
+			curNode->OutNodeFish(ofst);
 		}
 
 	}
 
 	// Очистка контейнера от элементов
-	void container::clear()
+	void container::Clear()
 	{
 		node* curNode;
 		curNode = head;
@@ -102,7 +103,7 @@ namespace animals {
 		size = 0;
 	}
 
-	node* container::get_node(int index)
+	node* container::GetNode(int index)
 	{
 		node* returnNode = head;
 
@@ -114,25 +115,25 @@ namespace animals {
 		return returnNode;
 	}
 
-	void container::swap(int index_first, int index_second)
+	void container::Swap(int index_first, int index_second)
 	{
 		node* temp = new node;
 
-		temp->an = get_node(index_first)->an;
-		get_node(index_first)->an = get_node(index_second)->an;
-		get_node(index_second)->an = temp->an;
+		temp->an = GetNode(index_first)->an;
+		GetNode(index_first)->an = GetNode(index_second)->an;
+		GetNode(index_second)->an = temp->an;
 
 	}
 
-	void container::sort()
+	void container::Sort()
 	{
 		for (int i = 0; i < size - 1; i++)
 		{
 			for (int j = i + 1; j < size; j++)
 			{
-				if (get_node(i)->an->compare(get_node(j)->an))
+				if (GetNode(i)->an->Compare(GetNode(j)->an))
 				{
-					swap(i, j);
+					Swap(i, j);
 				}
 			}
 		}
@@ -146,6 +147,6 @@ namespace animals {
 
 	container::~container()
 	{
-		clear();
+		Clear();
 	}
 } // end animals namespace

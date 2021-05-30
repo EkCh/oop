@@ -10,8 +10,8 @@ namespace animals
     public:
         pref p;
 
-        void input(std::ifstream& ifst);
-        void output(std::ofstream& ofst);
+        void Input(std::ifstream& ifst);
+        void Output(std::ofstream& ofst);
         ~beast();
     };
 } // end animals namespace

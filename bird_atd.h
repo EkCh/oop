@@ -2,7 +2,8 @@
 #include <fstream>
 #include "animal_atd.h"
 
-namespace animals {
+namespace animals 
+{
     class bird : public animal
     {
         enum migr { MIGRANT, NONMIGRANT };
@@ -10,8 +11,8 @@ namespace animals {
     public:
         migr m; // перелетность
 
-        void input(std::ifstream& ifst);
-        void output(std::ofstream& ofst);
+        void Input(std::ifstream& ifst);
+        void Output(std::ofstream& ofst);
         ~bird();
     };
 } // end animals namespace

@@ -2,7 +2,8 @@
 #include "animal_atd.h"
 #include <fstream>
 
-namespace animals {
+namespace animals 
+{
     class fish : public animal
     {
         enum habitat { RIVER, SEA, LAKE };
@@ -10,9 +11,9 @@ namespace animals {
     public:
         habitat h; // место проживания
 
-        void input(std::ifstream& ifst);
-        void output(std::ofstream& ofst);
-        void output_fish(std::ofstream& ofst);
+        void Input(std::ifstream& ifst);
+        void Output(std::ofstream& ofst);
+        void OutFish(std::ofstream& ofst);
         ~fish();
     };
 } // end animals namespace

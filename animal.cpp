@@ -5,9 +5,10 @@
 #include "beast_atd.h"
 
 using namespace std;
-namespace animals {
+namespace animals 
+{
 	// Ввод параметров из файла
-	animal* animal::in(ifstream& ifst)
+	animal* animal::In(ifstream& ifst)
 	{
 		animal* an;
 		int k;
@@ -27,23 +28,22 @@ namespace animals {
 			return 0;
 		}
 
-		an->input(ifst);
+		an->Input(ifst);
 		return an;
 	}
 
-	int animal::name_size()
+	int animal::NameSize()
 	{
 		return (name.size());
 	}
 
-	bool animal::compare(animal* other)
+	bool animal::Compare(animal* other)
 	{
-		return name_size() < other->name_size();
+		return NameSize() < other->NameSize();
 	}
 
-	void animal::output_fish(std::ofstream& ofst)
+	void animal::OutFish(std::ofstream& ofst)
 	{
 		ofst << endl; // пустая строка
 	}
-
 } // end animals namespace
