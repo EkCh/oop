@@ -21,11 +21,6 @@ int main(int argc, char* argv[])
 	}
 
 	ofstream ofst(argv[2]);
-	if (!ofst)
-	{
-		cout << "No output file found!" << endl;
-		return 0;
-	}
 
 	cout << "Start" << endl;
 	container c;
