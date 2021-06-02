@@ -7,12 +7,25 @@
 using namespace std;
 namespace animals 
 {
-	// Ââîä ïàğàìåòğîâ èç ôàéëà
+	// Ã‚Ã¢Ã®Ã¤ Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã°Ã®Ã¢ Ã¨Ã§ Ã´Ã Ã©Ã«Ã 
 	animal* animal::In(ifstream& ifst)
 	{
 		animal* an;
 		int k;
 		ifst >> k;
+		
+		if (ifst.fail())
+		{
+			cout << "Error! Wrong key input!" << endl;
+			exit(1);
+		}
+		
+		if ((k < 0) || (k > 2))
+		{
+			cout << "Error! The key range is <0-2>!" << endl;
+			exit(1);
+		}
+		
 		switch (k)
 		{
 		case 1:
@@ -44,6 +57,6 @@ namespace animals
 
 	void animal::OutFish(std::ofstream& ofst)
 	{
-		ofst << endl; // ïóñòàÿ ñòğîêà
+		ofst << endl; // Ã¯Ã³Ã±Ã²Ã Ã¿ Ã±Ã²Ã°Ã®ÃªÃ 
 	}
 } // end animals namespace
